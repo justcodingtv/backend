@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
+use Alsofronie\Uuid\UuidModelTrait;
 use Illuminate\Database\Eloquent\Model;
-use Spatie\BinaryUuid\HasBinaryUuid;
+use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 
 class Image extends Model
 {
-    use HasBinaryUuid;
+    use UuidModelTrait, Cachable;
 
     protected $fillable = ['path'];
 }

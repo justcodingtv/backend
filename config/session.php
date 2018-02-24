@@ -21,7 +21,7 @@ return [
     /*
     |--------------------------------------------------------------------------
     | Session Lifetime
-    |--------------------------------------------------------------------------
+    |redis
     |
     | Here you may specify the number of minutes that you wish the session
     | to be allowed to remain idle before it expires. If you want them

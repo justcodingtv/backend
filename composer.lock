@@ -4,9 +4,54 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3255b315cdd4a424607c10eeb61954aa",
-    "content-hash": "cc1ff8137298ef90c23dde37515f2687",
+    "hash": "a84e8d2fc1dcba007494f1f87f93cf87",
+    "content-hash": "d77a8b1d218e6a53690e135e9b6c322c",
     "packages": [
+        {
+            "name": "alsofronie/eloquent-uuid",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alsofronie/eloquent-uuid.git",
+                "reference": "ff617a05acb175b56573ba0da8a6c7ca1d65f9f3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alsofronie/eloquent-uuid/zipball/ff617a05acb175b56573ba0da8a6c7ca1d65f9f3",
+                "reference": "ff617a05acb175b56573ba0da8a6c7ca1d65f9f3",
+                "shasum": ""
+            },
+            "require": {
+                "webpatser/laravel-uuid": "2.*"
+            },
+            "require-dev": {
+                "laravel/framework": "^5.1.0",
+                "phpunit/phpunit": "~5.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Alsofronie\\Uuid\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Sofronie",
+                    "email": "alsofronie@gmail.com"
+                }
+            ],
+            "description": "A Laravel Eloquent Model trait for using UUID's as primary keys",
+            "time": "2018-01-27 06:54:52"
+        },
         {
             "name": "cybercog/laravel-ban",
             "version": "3.1.0",
@@ -78,69 +123,6 @@
                 "user"
             ],
             "time": "2018-02-08 05:43:05"
-        },
-        {
-            "name": "defuse/php-encryption",
-            "version": "v2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/defuse/php-encryption.git",
-                "reference": "5176f5abb38d3ea8a6e3ac6cd3bbb54d8185a689"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/defuse/php-encryption/zipball/5176f5abb38d3ea8a6e3ac6cd3bbb54d8185a689",
-                "reference": "5176f5abb38d3ea8a6e3ac6cd3bbb54d8185a689",
-                "shasum": ""
-            },
-            "require": {
-                "ext-openssl": "*",
-                "paragonie/random_compat": "~2.0",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "nikic/php-parser": "^2.0|^3.0",
-                "phpunit/phpunit": "^4|^5"
-            },
-            "bin": [
-                "bin/generate-defuse-key"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Defuse\\Crypto\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Hornby",
-                    "email": "taylor@defuse.ca",
-                    "homepage": "https://defuse.ca/"
-                },
-                {
-                    "name": "Scott Arciszewski",
-                    "email": "info@paragonie.com",
-                    "homepage": "https://paragonie.com"
-                }
-            ],
-            "description": "Secure PHP Encryption Library",
-            "keywords": [
-                "aes",
-                "authenticated encryption",
-                "cipher",
-                "crypto",
-                "cryptography",
-                "encrypt",
-                "encryption",
-                "openssl",
-                "security",
-                "symmetric key cryptography"
-            ],
-            "time": "2017-05-18 21:28:48"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -502,87 +484,50 @@
             "time": "2018-02-07 20:20:57"
         },
         {
-            "name": "firebase/php-jwt",
-            "version": "v4.0.0",
+            "name": "genealabs/laravel-model-caching",
+            "version": "0.2.37",
             "source": {
                 "type": "git",
-                "url": "https://github.com/firebase/php-jwt.git",
-                "reference": "dccf163dc8ed7ed6a00afc06c51ee5186a428d35"
+                "url": "https://github.com/GeneaLabs/laravel-model-caching.git",
+                "reference": "15c4e5bac31e1023fa156c9cf5f049ea5b42bb9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/dccf163dc8ed7ed6a00afc06c51ee5186a428d35",
-                "reference": "dccf163dc8ed7ed6a00afc06c51ee5186a428d35",
+                "url": "https://api.github.com/repos/GeneaLabs/laravel-model-caching/zipball/15c4e5bac31e1023fa156c9cf5f049ea5b42bb9c",
+                "reference": "15c4e5bac31e1023fa156c9cf5f049ea5b42bb9c",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Firebase\\JWT\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Neuman Vong",
-                    "email": "neuman+pear@twilio.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Anant Narayanan",
-                    "email": "anant@php.net",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
-            "homepage": "https://github.com/firebase/php-jwt",
-            "time": "2016-07-18 04:51:16"
-        },
-        {
-            "name": "guzzlehttp/guzzle",
-            "version": "6.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "f4db5a78a5ea468d4831de7f0bf9d9415e348699"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/f4db5a78a5ea468d4831de7f0bf9d9415e348699",
-                "reference": "f4db5a78a5ea468d4831de7f0bf9d9415e348699",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/promises": "^1.0",
-                "guzzlehttp/psr7": "^1.4",
-                "php": ">=5.5"
+                "illuminate/cache": "5.5 - 5.6",
+                "illuminate/database": "5.5 - 5.6",
+                "php": ">=7.1.3"
             },
             "require-dev": {
-                "ext-curl": "*",
-                "phpunit/phpunit": "^4.0 || ^5.0",
-                "psr/log": "^1.0"
-            },
-            "suggest": {
-                "psr/log": "Required for using the Log middleware"
+                "codedungeon/phpunit-result-printer": "*",
+                "fzaninotto/faker": "~1.4",
+                "mockery/mockery": "0.9.*",
+                "orchestra/database": "3.6.x-dev@dev",
+                "orchestra/testbench": "^3.6",
+                "orchestra/testbench-browser-kit": "^3.6",
+                "orchestra/testbench-dusk": "3.6.x-dev@dev",
+                "php-coveralls/php-coveralls": "*",
+                "phpmd/phpmd": "*",
+                "phpunit/phpunit": "*",
+                "predis/predis": "^1.1",
+                "sebastian/phpcpd": "*",
+                "symfony/thanks": "^1.0"
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "6.2-dev"
+                "laravel": {
+                    "providers": [
+                        "GeneaLabs\\LaravelModelCaching\\Providers\\Service"
+                    ]
                 }
             },
             "autoload": {
-                "files": [
-                    "src/functions_include.php"
-                ],
                 "psr-4": {
-                    "GuzzleHttp\\": "src/"
+                    "GeneaLabs\\LaravelModelCaching\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -591,74 +536,12 @@
             ],
             "authors": [
                 {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
+                    "name": "Mike Bronner",
+                    "email": "hello@genealabs.com"
                 }
             ],
-            "description": "Guzzle is a PHP HTTP client library",
-            "homepage": "http://guzzlephp.org/",
-            "keywords": [
-                "client",
-                "curl",
-                "framework",
-                "http",
-                "http client",
-                "rest",
-                "web service"
-            ],
-            "time": "2017-06-22 18:50:49"
-        },
-        {
-            "name": "guzzlehttp/promises",
-            "version": "v1.3.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/promises.git",
-                "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/a59da6cf61d80060647ff4d3eb2c03a2bc694646",
-                "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Promise\\": "src/"
-                },
-                "files": [
-                    "src/functions_include.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                }
-            ],
-            "description": "Guzzle promises library",
-            "keywords": [
-                "promise"
-            ],
-            "time": "2016-12-20 10:07:11"
+            "description": "Automatic caching for Eloquent models.",
+            "time": "2018-02-24 02:41:58"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -884,16 +767,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.6.3",
+            "version": "v5.6.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "db3e5422070d9b5166493313142b30419efab207"
+                "reference": "2e68209991e15aca1382ef9a3443d13f2e0d8755"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/db3e5422070d9b5166493313142b30419efab207",
-                "reference": "db3e5422070d9b5166493313142b30419efab207",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/2e68209991e15aca1382ef9a3443d13f2e0d8755",
+                "reference": "2e68209991e15aca1382ef9a3443d13f2e0d8755",
                 "shasum": ""
             },
             "require": {
@@ -904,7 +787,7 @@
                 "ext-openssl": "*",
                 "league/flysystem": "~1.0",
                 "monolog/monolog": "~1.12",
-                "nesbot/carbon": "~1.20",
+                "nesbot/carbon": "^1.22.1",
                 "php": "^7.1.3",
                 "psr/container": "~1.0",
                 "psr/simple-cache": "^1.0",
@@ -950,7 +833,7 @@
                 "illuminate/translation": "self.version",
                 "illuminate/validation": "self.version",
                 "illuminate/view": "self.version",
-                "tightenco/collect": "self.version"
+                "tightenco/collect": "<5.5.33"
             },
             "require-dev": {
                 "aws/aws-sdk-php": "~3.0",
@@ -1015,76 +898,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2018-02-09 13:33:22"
-        },
-        {
-            "name": "laravel/passport",
-            "version": "v5.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/passport.git",
-                "reference": "a04b9193054a8a7c50c26ff4f0519d3f7b5f5a30"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/passport/zipball/a04b9193054a8a7c50c26ff4f0519d3f7b5f5a30",
-                "reference": "a04b9193054a8a7c50c26ff4f0519d3f7b5f5a30",
-                "shasum": ""
-            },
-            "require": {
-                "firebase/php-jwt": "~3.0|~4.0",
-                "guzzlehttp/guzzle": "~6.0",
-                "illuminate/auth": "~5.6",
-                "illuminate/console": "~5.6",
-                "illuminate/container": "~5.6",
-                "illuminate/contracts": "~5.6",
-                "illuminate/database": "~5.6",
-                "illuminate/encryption": "~5.6",
-                "illuminate/http": "~5.6",
-                "illuminate/support": "~5.6",
-                "league/oauth2-server": "^6.0",
-                "php": ">=7.0",
-                "phpseclib/phpseclib": "^2.0",
-                "symfony/psr-http-message-bridge": "~1.0",
-                "zendframework/zend-diactoros": "~1.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "~1.0",
-                "phpunit/phpunit": "~6.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "6.0-dev"
-                },
-                "laravel": {
-                    "providers": [
-                        "Laravel\\Passport\\PassportServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Laravel\\Passport\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylor@laravel.com"
-                }
-            ],
-            "description": "Laravel Passport provides OAuth2 server support to Laravel.",
-            "keywords": [
-                "laravel",
-                "oauth",
-                "passport"
-            ],
-            "time": "2018-01-29 14:30:22"
+            "time": "2018-02-22 19:21:38"
         },
         {
             "name": "laravel/tinker",
@@ -1208,56 +1022,6 @@
             "time": "2017-09-01 08:23:26"
         },
         {
-            "name": "league/event",
-            "version": "2.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/event.git",
-                "reference": "e4bfc88dbcb60c8d8a2939a71f9813e141bbe4cd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/event/zipball/e4bfc88dbcb60c8d8a2939a71f9813e141bbe4cd",
-                "reference": "e4bfc88dbcb60c8d8a2939a71f9813e141bbe4cd",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "henrikbjorn/phpspec-code-coverage": "~1.0.1",
-                "phpspec/phpspec": "~2.0.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "League\\Event\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Frank de Jonge",
-                    "email": "info@frenky.net"
-                }
-            ],
-            "description": "Event package",
-            "keywords": [
-                "emitter",
-                "event",
-                "listener"
-            ],
-            "time": "2015-05-21 12:24:47"
-        },
-        {
             "name": "league/flysystem",
             "version": "1.0.42",
             "source": {
@@ -1340,74 +1104,6 @@
                 "storage"
             ],
             "time": "2018-01-27 16:03:56"
-        },
-        {
-            "name": "league/oauth2-server",
-            "version": "6.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/oauth2-server.git",
-                "reference": "a0cabb573c7cd5ee01803daec992d6ee3677c4ae"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth2-server/zipball/a0cabb573c7cd5ee01803daec992d6ee3677c4ae",
-                "reference": "a0cabb573c7cd5ee01803daec992d6ee3677c4ae",
-                "shasum": ""
-            },
-            "require": {
-                "defuse/php-encryption": "^2.1",
-                "ext-openssl": "*",
-                "lcobucci/jwt": "^3.1",
-                "league/event": "^2.1",
-                "paragonie/random_compat": "^2.0",
-                "php": ">=5.6.0",
-                "psr/http-message": "^1.0"
-            },
-            "replace": {
-                "league/oauth2server": "*",
-                "lncd/oauth2": "*"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.8.38 || ^5.7.21",
-                "zendframework/zend-diactoros": "^1.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "League\\OAuth2\\Server\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Alex Bilbie",
-                    "email": "hello@alexbilbie.com",
-                    "homepage": "http://www.alexbilbie.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A lightweight and powerful OAuth 2.0 authorization and resource server library with support for all the core specification grants. This library will allow you to secure your API with OAuth and allow your applications users to approve apps that want to access their data from your API.",
-            "homepage": "https://oauth2.thephpleague.com/",
-            "keywords": [
-                "Authentication",
-                "api",
-                "auth",
-                "authorisation",
-                "authorization",
-                "oauth",
-                "oauth 2",
-                "oauth 2.0",
-                "oauth2",
-                "protect",
-                "resource",
-                "secure",
-                "server"
-            ],
-            "time": "2017-12-23 23:33:42"
         },
         {
             "name": "monolog/monolog",
@@ -1703,41 +1399,33 @@
             "time": "2017-09-27 21:40:39"
         },
         {
-            "name": "phpseclib/phpseclib",
-            "version": "2.0.10",
+            "name": "predis/predis",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "d305b780829ea4252ed9400b3f5937c2c99b51d4"
+                "url": "https://github.com/nrk/predis.git",
+                "reference": "f0210e38881631afeafb56ab43405a92cafd9fd1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/d305b780829ea4252ed9400b3f5937c2c99b51d4",
-                "reference": "d305b780829ea4252ed9400b3f5937c2c99b51d4",
+                "url": "https://api.github.com/repos/nrk/predis/zipball/f0210e38881631afeafb56ab43405a92cafd9fd1",
+                "reference": "f0210e38881631afeafb56ab43405a92cafd9fd1",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=5.3.9"
             },
             "require-dev": {
-                "phing/phing": "~2.7",
-                "phpunit/phpunit": "^4.8.35|^5.7|^6.0",
-                "sami/sami": "~2.0",
-                "squizlabs/php_codesniffer": "~2.0"
+                "phpunit/phpunit": "~4.8"
             },
             "suggest": {
-                "ext-gmp": "Install the GMP (GNU Multiple Precision) extension in order to speed up arbitrary precision integer arithmetic operations.",
-                "ext-libsodium": "SSH2/SFTP can make use of some algorithms provided by the libsodium-php extension.",
-                "ext-mcrypt": "Install the Mcrypt extension in order to speed up a few other cryptographic operations.",
-                "ext-openssl": "Install the OpenSSL extension in order to speed up a wide variety of cryptographic operations."
+                "ext-curl": "Allows access to Webdis when paired with phpiredis",
+                "ext-phpiredis": "Allows faster serialization and deserialization of the Redis protocol"
             },
             "type": "library",
             "autoload": {
-                "files": [
-                    "phpseclib/bootstrap.php"
-                ],
                 "psr-4": {
-                    "phpseclib\\": "phpseclib/"
+                    "Predis\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1746,53 +1434,19 @@
             ],
             "authors": [
                 {
-                    "name": "Jim Wigginton",
-                    "email": "terrafrost@php.net",
-                    "role": "Lead Developer"
-                },
-                {
-                    "name": "Patrick Monnerat",
-                    "email": "pm@datasphere.ch",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Andreas Fischer",
-                    "email": "bantu@phpbb.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Hans-Jürgen Petrich",
-                    "email": "petrich@tronic-media.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Graham Campbell",
-                    "email": "graham@alt-three.com",
-                    "role": "Developer"
+                    "name": "Daniele Alessandri",
+                    "email": "suppakilla@gmail.com",
+                    "homepage": "http://clorophilla.net"
                 }
             ],
-            "description": "PHP Secure Communications Library - Pure-PHP implementations of RSA, AES, SSH2, SFTP, X.509 etc.",
-            "homepage": "http://phpseclib.sourceforge.net",
+            "description": "Flexible and feature-complete Redis client for PHP and HHVM",
+            "homepage": "http://github.com/nrk/predis",
             "keywords": [
-                "BigInteger",
-                "aes",
-                "asn.1",
-                "asn1",
-                "blowfish",
-                "crypto",
-                "cryptography",
-                "encryption",
-                "rsa",
-                "security",
-                "sftp",
-                "signature",
-                "signing",
-                "ssh",
-                "twofish",
-                "x.509",
-                "x509"
+                "nosql",
+                "predis",
+                "redis"
             ],
-            "time": "2018-02-19 04:29:13"
+            "time": "2016-06-16 16:22:20"
         },
         {
             "name": "psr/container",
@@ -2141,73 +1795,17 @@
             "time": "2018-01-20 00:28:24"
         },
         {
-            "name": "spatie/laravel-binary-uuid",
-            "version": "1.1.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/laravel-binary-uuid.git",
-                "reference": "ed1a38e56d5dd41919cbd31b7f913fe74ad2c4d0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-binary-uuid/zipball/ed1a38e56d5dd41919cbd31b7f913fe74ad2c4d0",
-                "reference": "ed1a38e56d5dd41919cbd31b7f913fe74ad2c4d0",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/queue": "~5.5.28|~5.6.0",
-                "php": "^7.0",
-                "ramsey/uuid": "^3.7"
-            },
-            "require-dev": {
-                "orchestra/testbench": "^3.5|~3.6.0",
-                "phpunit/phpunit": "^6.5|^7.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Spatie\\BinaryUuid\\UuidServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spatie\\BinaryUuid\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Brent Roose",
-                    "email": "brent@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Binary support for UUIDs in Laravel",
-            "homepage": "https://github.com/spatie/laravel-binary-uuid",
-            "keywords": [
-                "laravel-binary-uuid",
-                "spatie"
-            ],
-            "time": "2018-02-12 09:13:24"
-        },
-        {
             "name": "spatie/laravel-permission",
-            "version": "2.9.0",
+            "version": "2.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-permission.git",
-                "reference": "4d47ef1644ed451f1ea99d1c44443a3ad9bacfd4"
+                "reference": "8f5508a2e4cdc3e6657a31ac33d59bbda0cf5b10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/4d47ef1644ed451f1ea99d1c44443a3ad9bacfd4",
-                "reference": "4d47ef1644ed451f1ea99d1c44443a3ad9bacfd4",
+                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/8f5508a2e4cdc3e6657a31ac33d59bbda0cf5b10",
+                "reference": "8f5508a2e4cdc3e6657a31ac33d59bbda0cf5b10",
                 "shasum": ""
             },
             "require": {
@@ -2258,7 +1856,7 @@
                 "security",
                 "spatie"
             ],
-            "time": "2018-02-07 16:53:52"
+            "time": "2018-02-23 16:26:28"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -3015,66 +2613,6 @@
             "time": "2018-01-29 09:06:29"
         },
         {
-            "name": "symfony/psr-http-message-bridge",
-            "version": "v1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/psr-http-message-bridge.git",
-                "reference": "c2b757934f2d9681a287e662efbc27c41fe8ef86"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/psr-http-message-bridge/zipball/c2b757934f2d9681a287e662efbc27c41fe8ef86",
-                "reference": "c2b757934f2d9681a287e662efbc27c41fe8ef86",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3",
-                "psr/http-message": "~1.0",
-                "symfony/http-foundation": "~2.3|~3.0|~4.0"
-            },
-            "require-dev": {
-                "symfony/phpunit-bridge": "~3.2|4.0"
-            },
-            "suggest": {
-                "psr/http-message-implementation": "To use the HttpFoundation factory",
-                "zendframework/zend-diactoros": "To use the Zend Diactoros factory"
-            },
-            "type": "symfony-bridge",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Bridge\\PsrHttpMessage\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "PSR HTTP message bridge",
-            "homepage": "http://symfony.com",
-            "keywords": [
-                "http",
-                "http-message",
-                "psr-7"
-            ],
-            "time": "2017-12-19 00:31:44"
-        },
-        {
             "name": "symfony/routing",
             "version": "v4.0.4",
             "source": {
@@ -3462,56 +3000,58 @@
             "time": "2016-09-01 10:05:43"
         },
         {
-            "name": "zendframework/zend-diactoros",
-            "version": "1.7.0",
+            "name": "webpatser/laravel-uuid",
+            "version": "2.2.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/zendframework/zend-diactoros.git",
-                "reference": "ed6ce7e2105c400ca10277643a8327957c0384b7"
+                "url": "https://github.com/webpatser/laravel-uuid.git",
+                "reference": "c87d5c631938edad7aae96d27881e3ea3de23d80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/ed6ce7e2105c400ca10277643a8327957c0384b7",
-                "reference": "ed6ce7e2105c400ca10277643a8327957c0384b7",
+                "url": "https://api.github.com/repos/webpatser/laravel-uuid/zipball/c87d5c631938edad7aae96d27881e3ea3de23d80",
+                "reference": "c87d5c631938edad7aae96d27881e3ea3de23d80",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.6 || ^7.0",
-                "psr/http-message": "^1.0"
-            },
-            "provide": {
-                "psr/http-message-implementation": "1.0"
+                "php": ">=5.3.0"
             },
             "require-dev": {
-                "ext-dom": "*",
-                "ext-libxml": "*",
-                "phpunit/phpunit": "^5.7.16 || ^6.0.8",
-                "zendframework/zend-coding-standard": "~1.0"
+                "fzaninotto/faker": "1.5.*",
+                "phpunit/phpunit": "4.7.*"
+            },
+            "suggest": {
+                "paragonie/random_compat": "A random_bytes Php 5.x polyfill."
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "1.7.x-dev",
-                    "dev-develop": "1.8.x-dev"
+                "laravel": {
+                    "aliases": {
+                        "Uuid": "Webpatser\\Uuid\\Uuid"
+                    }
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Zend\\Diactoros\\": "src/"
+                "psr-0": {
+                    "Webpatser\\Uuid": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-2-Clause"
+                "MIT"
             ],
-            "description": "PSR HTTP Message implementations",
-            "homepage": "https://github.com/zendframework/zend-diactoros",
+            "authors": [
+                {
+                    "name": "Christoph Kempen",
+                    "email": "christoph@downsized.nl"
+                }
+            ],
+            "description": "Class to generate a UUID according to the RFC 4122 standard. Support for version 1, 3, 4 and 5 UUID are built-in.",
+            "homepage": "https://github.com/webpatser/uuid",
             "keywords": [
-                "http",
-                "psr",
-                "psr-7"
+                "UUID RFC4122"
             ],
-            "time": "2018-01-04 18:21:48"
+            "time": "2017-09-10 21:34:32"
         }
     ],
     "packages-dev": [
@@ -5301,7 +4841,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "alsofronie/eloquent-uuid": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

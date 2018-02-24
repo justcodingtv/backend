@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
-
 Route::get('/', function () {
     return 'You are connected to the API';
 });
@@ -11,6 +9,7 @@ Route::get('/', function () {
  * */
 Route::group(['prefix' => 'auth'], function () {
     Route::post('login', 'Auth\LoginController@login');
+    Route::post('register', 'Auth\RegisterController@register');
 });
 
 /*

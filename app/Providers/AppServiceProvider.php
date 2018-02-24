@@ -19,6 +19,11 @@ class AppServiceProvider extends ServiceProvider
          * Observers
          * */
         User::observe(UserObserver::class);
+
+        /*
+         * Bullshit CORS headers
+         * */
+        header('Access-Control-Allow-Headers: Content-Type, X-Requested-With, Authorization');
     }
 
     /**
