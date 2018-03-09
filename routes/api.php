@@ -6,6 +6,7 @@ Route::get('/', function () {
 
 /*
  * Auth routes
+ * Does not require to be logged in
  * */
 Route::group(['prefix' => 'auth'], function () {
     Route::post('login', 'Auth\LoginController@login');
@@ -16,5 +17,7 @@ Route::group(['prefix' => 'auth'], function () {
  * Routes which require auth
  * */
 Route::group(['middleware' => 'auth:api'], function () {
-
+    Route::group(['prefix' => 'auth'], function () {
+        Route::get('check', 'Auth\LoginController@check');
+    });
 });

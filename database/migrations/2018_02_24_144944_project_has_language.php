@@ -14,11 +14,11 @@ class ProjectHasLanguage extends Migration
     public function up()
     {
         Schema::create('project_has_language', function (Blueprint $table) {
-            $table->uuid('project_id');
-            $table->uuid('language_id');
+            $table->integer('project_id')->unsigned();
+            $table->integer('language_id')->unsigned();
 
-            $table->foreign('project_id')->references('uuid')->on('projects')->onDelete('cascade');
-            $table->foreign('language_id')->references('uuid')->on('languages')->onDelete('cascade');
+            $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
+            $table->foreign('language_id')->references('id')->on('languages')->onDelete('cascade');
         });
     }
 

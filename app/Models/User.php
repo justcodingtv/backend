@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Alsofronie\Uuid\UuidModelTrait;
+use App\Traits\UuidExtra;
 use Cog\Laravel\Ban\Traits\Bannable;
 use Spatie\Permission\Traits\HasRoles;
 use Tymon\JWTAuth\Contracts\JWTSubject;
@@ -12,23 +12,15 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable implements JWTSubject
 {
-    use UuidModelTrait, Notifiable, Bannable, HasRoles, SoftDeletes;
+    use UuidExtra, Notifiable, Bannable, HasRoles, SoftDeletes;
 
     protected $fillable = [
-        'uuid', 'username', 'first_name', 'last_name', 'email', 'password', 'options', 'extra',
+        'username', 'first_name', 'last_name', 'email', 'password', 'options', 'extra',
     ];
 
     protected $hidden = [
         'password', 'remember_token',
     ];
-
-    /**
-     * @return string
-     */
-    public function getKeyName ()
-    {
-        return 'uuid';
-    }
 
     /**
      * @return mixed
@@ -49,11 +41,11 @@ class User extends Authenticatable implements JWTSubject
     /**
      * Livestreaming key relation
      *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function livestreamingKey ()
     {
-        return $this->hasMany(LivestreamingKey::class);
+        return $this->hasOne(LivestreamingKey::class);
     }
 
     /**
@@ -64,5 +56,10 @@ class User extends Authenticatable implements JWTSubject
     public function projects ()
     {
         return $this->hasMany(Project::class);
+    }
+
+    public function findOrFailUUID ($uuid)
+    {
+        return $this->where('uuid', $uuid)->firstOrFail();
     }
 }

@@ -14,20 +14,20 @@ class CreateCommentsTable extends Migration
     public function up()
     {
         Schema::create('comments', function (Blueprint $table) {
-            $table->uuid('uuid');
-            $table->primary('uuid');
+            $table->increments('id');
+            $table->uuid('uuid')->unique();
 
             $table->text('body');
             $table->text('extra')->nullable();
 
-            $table->uuid('user_id');
-            $table->uuid('streamer_id');
+            $table->integer('user_id')->unsigned();
+            $table->integer('streamer_id')->unsigned();
 
             $table->softDeletes();
             $table->timestamps();
 
-            $table->foreign('user_id')->references('uuid')->on('users')->onDelete('cascade');
-            $table->foreign('streamer_id')->references('uuid')->on('users')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('streamer_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

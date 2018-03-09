@@ -14,7 +14,8 @@ class CreateProjectsTable extends Migration
     public function up()
     {
         Schema::create('projects', function (Blueprint $table) {
-            $table->uuid('uuid')->primary();
+            $table->increments('id');
+            $table->uuid('uuid')->unique();
 
             $table->text('title');
             $table->text('description');
@@ -22,13 +23,13 @@ class CreateProjectsTable extends Migration
             $table->boolean('active')->default(true);
             $table->boolean('private')->default(false);
 
-            $table->uuid('user_id');
+            $table->integer('user_id')->unsigned();
             $table->text('extra')->nullable();
 
             $table->softDeletes();
             $table->timestamps();
 
-            $table->foreign('user_id')->references('uuid')->on('users')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

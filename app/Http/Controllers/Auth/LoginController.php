@@ -20,14 +20,18 @@ class LoginController extends Controller
         return response()->json(['error' => 'Unauthorized'], 401);
     }
 
+    public function check ()
+    {
+        return new AuthInfoResource(Auth::user());
+    }
+
     protected function respondWithToken ($token)
     {
         return response()->json([
-            'success' => true,
             'access_token' => $token,
             'token_type' => 'bearer',
-            'expires_in' => auth()->factory()->getTTL() * 60,
+            'expires_in' => Auth::factory()->getTTL() * 60,
             'user' => new AuthInfoResource(Auth::user()),
-        ]);
+        ], 200);
     }
 }

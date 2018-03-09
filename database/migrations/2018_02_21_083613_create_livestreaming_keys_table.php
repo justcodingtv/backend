@@ -15,12 +15,12 @@ class CreateLivestreamingKeysTable extends Migration
     {
         Schema::create('livestreaming_keys', function (Blueprint $table) {
             $table->string('streaming_key', 1000);
-            $table->uuid('user_id');
+            $table->integer('user_id')->unsigned();
 
             $table->boolean('active')->default(true);
             $table->timestamps();
 
-            $table->foreign('user_id')->references('uuid')->on('users')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

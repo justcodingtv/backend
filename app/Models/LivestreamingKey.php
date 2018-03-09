@@ -9,8 +9,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class LivestreamingKey extends Model
 {
-    use SoftDeletes;
-
     /*
      * Auto creates a streaming key when a model is created.
      * Prevents key change.
@@ -30,10 +28,10 @@ class LivestreamingKey extends Model
 
     protected $fillable = ['active'];
 
-    public function getStreamingKey()
+    public function getStreamingKeyAttribute($value)
     {
         try {
-            return Crypt::decryptString($this->streaming_key);
+            return Crypt::decryptString($value);
         } catch (DecryptException $e) {
             return 'error';
         }

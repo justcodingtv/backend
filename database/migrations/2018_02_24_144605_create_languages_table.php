@@ -14,16 +14,17 @@ class CreateLanguagesTable extends Migration
     public function up()
     {
         Schema::create('languages', function (Blueprint $table) {
-            $table->uuid('uuid')->primary();
+            $table->increments('id');
+            $table->uuid('uuid')->unique();
 
             $table->text('title');
             $table->text('description');
 
-            $table->uuid('image_id')->nullable();
+            $table->integer('image_id')->unsigned()->nullable();
 
             $table->timestamps();
 
-            $table->foreign('image_id')->references('uuid')->on('images')->onDelete('SET NULL');
+            $table->foreign('image_id')->references('id')->on('images')->onDelete('SET NULL');
         });
     }
 

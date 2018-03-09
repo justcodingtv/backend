@@ -14,18 +14,19 @@ class CreateImagesTable extends Migration
     public function up()
     {
         Schema::create('images', function (Blueprint $table) {
-            $table->uuid('uuid')->primary();
+            $table->increments('id');
+            $table->uuid('uuid')->unique();
 
             $table->string('path', 1000);
             $table->text('extra')->nullable();
-            $table->uuid('user_id')->nullable();
+            $table->integer('user_id')->unsigned()->nullable();
             $table->timestamps();
 
-            $table->foreign('user_id')->references('uuid')->on('users')->onDelete('SET NULL');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('SET NULL');
         });
 
         Schema::table('users', function (Blueprint $table) {
-            $table->foreign('avatar_id')->references('uuid')->on('images')->onDelete('SET NULL');
+            $table->foreign('avatar_id')->references('id')->on('images')->onDelete('SET NULL');
         });
     }
 

@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+/*
+ * Webhooks
+ * */
+Route::group(['prefix' => 'webhook'], function () {
+    Route::group(['prefix' => 'stream'], function () {
+        Route::post('/start', 'Webhook\StreamingController@startStream');
+        Route::post('/stop', 'Webhook\StreamingController@stopStream');
+    });
+});
